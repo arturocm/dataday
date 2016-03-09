@@ -123,7 +123,7 @@ subtitle: Anticipando "lo que viene"
 content_class: flexbox vcenter
 
 
-![supply chain routes](../../images/dataday/simplesc.gif) ![supply chain routes](../../images/dataday/complexsc.gif)
+![supply chain routes](images/dataday/simplesc.gif) ![supply chain routes](images/dataday/complexsc.gif)
 
 <aside class="note"> <section>[Flowing Data post](http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/)</section></aside>
 
@@ -135,7 +135,7 @@ subtitle: Un caso inventado...
 	<div class="col-md-6">
 	<h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
 	<h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
-	<img class="img-responsive" src="../../images/dataday/sc.png" alt="supply chain routes">
+	<img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
 	</div>
 	<div class="col-md-6">
   <table class="table table-hover">
@@ -382,7 +382,7 @@ title: #datavis
 
 <iframe
   frameborder="0" seamless="seamless" scrolling="no"
-  src="../../images/dataday/inventario.html">
+  src="images/dataday/inventario.html">
 </iframe>
 
 ---

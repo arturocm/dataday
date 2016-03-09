@@ -2,7 +2,7 @@ var SLIDE_CONFIG = {
   // Slide settings
   settings: {
     title: 'Inventario Fantasma',
-    subtitle: 'El ‘hello world’ del Retail Analytics',
+    subtitle: 'El "hello world" del Retail Analytics',
     eventInfo: {
       title: 'DataDay',
       date: 'Marzo 15, 2016'
