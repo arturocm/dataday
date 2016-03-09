@@ -125,7 +125,9 @@ content_class: flexbox vcenter
 
 ![supply chain routes](images/dataday/simplesc.gif) ![supply chain routes](images/dataday/complexsc.gif)
 
-<aside class="note"> <section>[Flowing Data post](http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/)</section></aside>
+<aside class="note"> <section>
+	<p>Para esta simulación/demostración se tomo en cuenta un "Moving Average" de 6 semanas</p>
+</section></aside>
 
 ---
 title: Inventario Fantasma
@@ -204,7 +206,9 @@ subtitle: Un caso inventado...
 
 Entonces por que son tan importantes los últimos 50 metros??? 
 
-<aside class="note"> <section>[Flowing Data post](http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/)</section></aside>
+<aside class="note"> <section>
+	<p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
+</section></aside>
 
 ---
 title: Inventario Fantasma
@@ -372,6 +376,10 @@ subtitle: ¿Los problemas del productor a la <sup>n</sup> potencia?
 			</div>
 		</div>
 	</div>
+
+<aside class="note"> <section>
+	<p>Si bien el Retailer no se tiene que preocupar por lo que pasa en la cadena de suministro de sus proveedores, la combinacion de ITEM x CENTRO DE DISTRIBUCION x TIENDAS hace que sea igual o más complicado controlar lo que sucede </p>
+</section></aside>
 ---
 title: Inventario Fantasma
 subtitle: Y los algoritmos 'apá!
@@ -384,6 +392,10 @@ title: #datavis
   frameborder="0" seamless="seamless" scrolling="no"
   src="images/dataday/inventario.html">
 </iframe>
+
+<aside class="note"> <section>
+	<p>Siendo más especificos el periodo de tiempo sin ventas puede ser generado por 1) Inventario Fantasma, 2) Producto en el almacen (no estante), 3) No hay producto disponible, 4) No se vendió el producto, 5) otros.</p>
+</section></aside>
 
 ---
 title: Inventario Fantasma

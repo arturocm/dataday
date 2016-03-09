@@ -1,0 +1,600 @@
+<!--
+Google IO 2012 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahe <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inventario Fantasma</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="all" href="theme/css/app.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+<!-- <slide class="logoslide nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo.png"></span>
+  </article>
+</slide>
+ -->
+<slide class="title-slide segue nobackground">
+  <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+  <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+  <hgroup class="auto-fadein">
+    <h1 data-config-title><!-- populated from slide_config.json --></h1>
+    <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+    <p data-config-presenter><!-- populated from slide_config.json --></p>
+  </hgroup>
+</slide>
+
+
+<slide  >
+  
+    <hgroup>
+      <h2>Agenda</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><ul>
+<li>Bio</li>
+<li>Inventario Fantasma:<ul>
+<li>Desde el punto de vista del Productor</li>
+<li>Un tipo de Out-Of-Stock (OOS)</li>
+<li>Desde el punto de vista del Retailer</li>
+<li>Y los algoritmos 'apá!</li>
+</ul>
+</li>
+<li>Q&amp;A</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Bio</h2>
+      <h3>"Street Cred"</h3>
+    </hgroup>
+    <article ><p>Experience Roadmap IMAGE</p>
+<aside class="note"> <section> Crear un timeline/roadmap sencillo para representar la experiencia </section></aside></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>Desde el punto de vista del productor</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>De la tierra a la tienda...</h2>
+      <h3>¿Qué pasta antes de que puedas comprar algo?</h3>
+    </hgroup>
+    <article ><p><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"></p>
+<div class="container-fluid">
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-2">
+                <i class="fa fa-industry fa-5x"></i>
+                <h4>Producción</h4>
+                <br>
+                <div class="text-left">
+                    <h5><ul>
+                        <li>Materia Prima</li>
+                        <li>Mano Obra</li>
+                        <li>Mantenimiento</li>
+                        <li>Reparación</li>
+                        <li>Operaciones</li>
+                        <li>Calidad</li>
+                        <li><font color="red">Control Inventario</font></li>
+                    </ul></h5>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <i class="fa fa-long-arrow-left faa-passing-reverse animated"></i>
+                <h6>info</h6>
+                <i class="fa fa-arrow-right faa-passing animated"></i>
+                <h6>producto</h6>
+            </div>
+            <div class="col-md-2">
+                <i class="fa fa-truck fa-5x fa-flip-horizontal"></i>
+                <h4>Distribución</h4>
+                <br>
+                <div class="text-left">
+                    <h5><ul>
+                        <li>Logística</li>
+                        <li>Transportación</li>
+                        <li>Almacenamiento</li>
+                        <li><font color="red">Control Inventario</font></li>
+                        <li>Mano de Obra</li>
+                        <li>Cross-docking</li>
+                        <li>Mantenimiento</li>
+                    </ul></h5>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <i class="fa fa-long-arrow-left faa-passing-reverse animated"></i>
+                <h6>info</h6>
+                <i class="fa fa-arrow-right faa-passing animated"></i>
+                <h6>producto</h6>
+            </div>
+            <div class="col-md-2">
+                <i class="fa fa-shopping-cart fa-5x"></i>
+                <h4>Punto de Venta</h4>
+                <br>
+                <div class="text-left">
+                    <h5><ul>
+                        <li>Mano Obra</li>
+                        <li>Bodega</li>
+                        <li><font color="red">Control Inventario</font></li>
+                        <li>Operacion Tienda</li>
+                        <li>Logistica</li>
+                    </ul></h5>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <i class="fa fa-long-arrow-left faa-passing-reverse animated"></i>
+                <h6>info</h6>
+                <i class="fa fa-arrow-right faa-passing animated"></i>
+                <h6>producto</h6>
+            </div>
+            <div class="col-md-2">
+                <i class="fa fa-home fa-5x"></i>
+                <h4>Consumidor</h4>
+                <br>
+                <div class="text-left">
+                    <h5><ul>
+                        <li>Consumo Producto</li>
+                        <li><font color="red">Control Inventario</font></li>
+                        <li>Presupuesto</li>
+                    </ul></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><br>
+<br></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Forecasting</h2>
+      <h3>Anticipando "lo que viene"</h3>
+    </hgroup>
+    <article class="flexbox vcenter"><p><img alt="supply chain routes" src="images/dataday/simplesc.gif" /> <img alt="supply chain routes" src="images/dataday/complexsc.gif" /></p>
+<aside class="note"> <section>
+    <p>Para esta simulación/demostración se tomo en cuenta un "Moving Average" de 6 semanas</p>
+</section></aside></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Inventario Fantasma</h2>
+      <h3>Un caso inventado...</h3>
+    </hgroup>
+    <article ><div class="container-fluid"> 
+    <div class="col-md-6">
+    <h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
+    <h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
+    <img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
+    </div>
+    <div class="col-md-6">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>item</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Distancia (Km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Malta</td>
+        <td>Vancouver</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,578.8</td>
+      </tr>
+      <tr>
+        <td>Cebada</td>
+        <td>Milwaukee</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,472.8</td>
+      </tr>
+            <tr>
+        <td>Lúpulo</td>
+        <td>Alemania</td>
+        <td>Hermosillo</td>
+        <td class="text-right">9,474.2</td>
+      </tr>
+            <tr>
+        <td>Envases</td>
+        <td>Monterrey</td>
+        <td>Hermosillo</td>
+        <td class="text-right">1,118.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>Hermosillo</td>
+        <td>León</td>
+        <td class="text-right">1,288.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>León</td>
+        <td>Cd. México</td>
+        <td class="text-right">324.6</td>
+      </tr>
+                  <tr>
+        <td>Cerveza</td>
+        <td>Cd. México</td>
+        <td>WTC</td>
+        <td class="text-right">1.3</td>
+      </tr>
+            </tr>
+                  <tr>
+        <td><b>TOTAL</b></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"><b>17,258.4</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<p>Entonces por que son tan importantes los últimos 50 metros??? </p>
+<aside class="note"> <section>
+    <p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
+</section></aside></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>Un tipo de Out of Stock (OOS)</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Out-Of-Stocks (OOS)</h2>
+      <h3>La madre del inventario fantasma!</h3>
+    </hgroup>
+    <article ><p><strong>OOS</strong> ocurre cuando no hay "físicamente" un item en el estante para su venta.<br />
+<strong>OOS</strong> inicia cuando el último item de un SKU es removido del estante.<br />
+<strong>OOS</strong> termina con el resuministro del mismo SKU en el estante.  </p>
+<p>Podemos definir los siguientes tipos de OOS:</p>
+<ul>
+<li>DC: <strong>No Existe</strong> inventario</li>
+<li>Tienda: <strong>No Existe</strong> inventario en la tienda</li>
+<li>Shelf: <strong>Existe</strong> inventario en la tienda pero no se encuentra en el estante</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Shelf - OOS</h2>
+      <h3>Por que no está mi producto en el estante?</h3>
+    </hgroup>
+    <article ><ul>
+<li>No hay producto  </li>
+<li>Operación de la Tienda:  <ul>
+<li>Está en un lugar incorrecto  </li>
+<li>Todavía está en el bodega (backroom)  </li>
+<li>Está en "transito"  </li>
+</ul>
+</li>
+<li>Nivel de inventario Incorrecto en el sistema:  <ul>
+<li>Inventario Escondido  </li>
+<li><strong><em>Inventario Fantasma</em></strong>  <ul>
+<li>Robado, Dañado o Extraviado  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Inventario Fantasma</h2>
+      <h3>El circulo vicioso...</h3>
+    </hgroup>
+    <article ><ul>
+<li>Tengo inventario pero <strong>NO TENGO</strong> inventario  </li>
+<li>No se ordena más producto por que "el sistema dice que hay"  </li>
+<li>No se registra ninguna venta (POS) en las semanas posteriores  </li>
+<li>Se ajusta el "forecast" acorde a las ventas registradas (o no registradas)  </li>
+<li>Se llega a la conclusión de que "Ese producto no se vende"  <ul>
+<li>Auditoría fisica para corregir inventarios  </li>
+<li>Se puede tomar la decisión de descontinuar el producto:  </li>
+</ul>
+</li>
+</ul>
+<p>Este ciclo se repite... y se repite... y se repite... y se repite...</p></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>Desde el punto de vista del Retailer</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>De la tienda a las casas...</h2>
+      <h3>¿Los problemas del productor a la <sup>n</sup> potencia?</h3>
+    </hgroup>
+    <article ><div class="container-fluid">
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-truck fa-2x fa-flip-horizontal"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-truck fa-2x fa-flip-horizontal"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-truck fa-2x fa-flip-horizontal"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+            <div class="col-md-1">
+                <font size="4"><i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i>&nbsp;<i class="fa fa-industry"></i></font>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-2x fa-fw">&nbsp;</i>
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-shopping-cart fa-2x"></i> 
+                <i class="fa fa-arrow-down faa-float animated"></i> 
+                <i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i><i class="fa fa-home"></i>
+            </div>
+        </div>
+    </div>
+
+<aside class="note"> <section>
+    <p>Si bien el Retailer no se tiene que preocupar por lo que pasa en la cadena de suministro de sus proveedores, la combinacion de ITEM x CENTRO DE DISTRIBUCION x TIENDAS hace que sea igual o más complicado controlar lo que sucede </p>
+</section></aside></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>Y los algoritmos 'apá!</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>#datavis</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><iframe
+  frameborder="0" seamless="seamless" scrolling="no"
+  src="images/dataday/inventario.html">
+</iframe>
+
+<aside class="note"> <section>
+    <p>Siendo más especificos el periodo de tiempo sin ventas puede ser generado por 1) Inventario Fantasma, 2) Producto en el almacen (no estante), 3) No hay producto disponible, 4) No se vendió el producto, 5) otros.</p>
+</section></aside></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Inventario Fantasma</h2>
+      <h3>Un nuevo approach</h3>
+    </hgroup>
+    <article ><p>Por medio de algoritmos podemos identificar instancias de Inventario Fansamsa Potencial y tomar medidas especificas para solucionarlos</p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Retail Analytics</h2>
+      <h3>Otras aplicaciones</h3>
+    </hgroup>
+    <article ><p>Solo en el área de replenishment:</p>
+<ul>
+<li>Identificación de eventos por medio de precios promedios  </li>
+<li>Optimización de niveles de inventarios  </li>
+<li>Afinación de Forecast  </li>
+<li>Identificar tendencias por tienda/region/categoria y customatizar soluciones  </li>
+<li>Combinación con información socio-economica  </li>
+<li>Combinación con información del clima  </li>
+<li>Entre otras...  </li>
+</ul></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>QA</h3>
+    </hgroup>
+  
+</slide>
+
+
+<slide class="thank-you-slide segue nobackground">
+  <aside class="gdbar right"><img src="images/dataday/DataDay-clean.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <h2>&lt;Inventario Fantasma&gt;</h2>
+    <p>Gracias!</p>
+  </article>
+  <p class="auto-fadein" data-config-contact>
+    <!-- populated from slide_config.json -->
+  </p>
+</slide>
+
+<!-- <slide class="logoslide dark nobackground">
+  <article class="flexbox vcenter">
+    <span><img src="images/google_developers_logo_white.png"></span>
+  </article>
+</slide> -->
+
+<slide class="backdrop"></slide>
+
+</slides>
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
