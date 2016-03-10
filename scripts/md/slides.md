@@ -2,10 +2,10 @@ title: Agenda
 
 - Bio
 - Inventario Fantasma:
-	- Desde el punto de vista del Productor
 	- Un tipo de Out-Of-Stock (OOS)
+	- Desde el punto de vista del Productor
 	- Desde el punto de vista del Retailer
-	- Y los algoritmos 'apá!
+	- Analytics!
 - Q&A
 
 ---
@@ -13,9 +13,132 @@ title: Agenda
 title: Bio
 subtitle: "Street Cred"
 
-Experience Roadmap IMAGE
+- Ing. Mecánico Administrador - Tec de Monterrey
+- M. Mfg, Supply Chain y Operaciones - McGill University
+- Más de 9 años de experiencia en Supply Chain y Analytics en:
+	- Retail y CPGs
+	- Distribución de Electronicos
+	- Industria Aeroespacial
+	- Industria Automotriz
+	- Manufactura
+- Sonorense (hasta a -30ºC)
 
-<aside class="note"> <section> Crear un timeline/roadmap sencillo para representar la experiencia </section></aside>
+<aside class="note"> <section> <img class="img-responsive" src="images/dataday/carniasada.jpg" alt="OOS Root Cause"></section></aside>
+
+---
+title: Inventario Fantasma
+subtitle: Un tipo de Out of Stock (OOS)
+class: segue dark nobackground
+---
+title: Out-Of-Stocks (OOS)
+subtitle: La madre del inventario fantasma! 
+
+**OOS** ocurre cuando no hay "físicamente" un item en el estante para su venta.  
+**OOS** inicia cuando el último item de un SKU es removido del estante.  
+**OOS** termina con el resuministro del mismo SKU en el estante.  
+
+Podemos definir los siguientes tipos de OOS:
+
+- DC: **No Existe** inventario
+- Store: **No Existe** inventario en la tienda
+- Shelf: **Existe** inventario en la tienda pero no se encuentra en el estante
+
+---
+title: OOS
+subtitle: Desde el punto de vista del consumidor
+
+<div class="container-fluid"> 
+	<div class="col-md-5">
+		<img class="img-responsive" src="images/dataday/root_cause_oos.png" alt="OOS Root Cause">
+	</div>
+	<div class="col-md-7">
+		<h3>Reacción del consumidor ante OOS</h3>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th>Acción</th>
+					<th>Porcentage</th>
+					<th>Tienda</th>
+					<th>Proveedor</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>No compra item</td>
+					<td class="text-right">9 %</td>
+					<td class="text-center">X</td>
+					<td class="text-center">X</td>
+				</tr>
+				<tr>
+					<td>Compra item en otra tienda</td>
+					<td class="text-right">31 %</td>
+					<td class="text-center">X</td>
+					<td class="text-center"></td>
+				</tr>
+				<tr>
+					<td>Pospone compra</td>
+					<td class="text-right">15 %</td>
+					<td class="text-center">X</td>
+					<td class="text-center">X</td>
+				</tr>
+				<tr>
+					<td>Sustituye misma marca</td>
+					<td class="text-right">19 %</td>
+					<td class="text-center"></td>
+					<td class="text-center"></td>
+				</tr>
+				<tr>
+					<td>Sustituye otra marca</td>
+					<td class="text-right">26 %</td>
+					<td class="text-center"></td>
+					<td class="text-center">X</td>
+				</tr>
+			</tbody>
+		</table>
+		<h6>Credito: Gruen, Corsten, and Bharadwaj 2002</h6>
+	</div>
+</div>
+
+---
+title: Shelf - OOS
+subtitle: ¿Por que no está mi producto en el estante?
+
+- No hay producto  
+- Operación de la Tienda:  
+	- Está en un lugar incorrecto  
+	- Todavía está en el bodega (backroom)  
+	- Está en "transito"  
+- Nivel de inventario Incorrecto en el sistema:  
+	- Inventario Escondido  
+	- ***Inventario Fantasma***  
+		- Robado, Dañado o Extraviado  
+---
+title: Inventario Fantasma
+subtitle: El círculo vicioso...
+
+<div class="container-fluid"> 
+	<div class="col-md-8 col-md-offset-2">
+		<img class="img-responsive" src="images/dataday/vensim.png" alt="SD">
+	</div>
+</div>
+
+<aside class="note"> <section>
+					<div class="text-left">
+					<h5><ul>
+						<li>Tengo inventario pero **NO TENGO** inventario</li>
+						<li>No se ordena más producto por que "el sistema dice que hay"  </li>
+						<li>No se registra ninguna venta (POS) en las semanas posteriores </li>
+						<li>Se ajusta el "forecast" acorde a las ventas registradas (o no registradas) </li>
+						<li>Se llega a la conclusión de que "Ese producto no se vende"  </li>
+						<ul>
+						<li>Auditoría fisica para corregir inventarios </li>
+						<li>Se puede tomar la decisión de descontinuar el producto</li>
+						</ul>
+					</ul>
+					Este ciclo se repite... y se repite... y se repite... y se repite...
+					</h5>
+				</div>
+</section></aside>
 
 ---
 title: Inventario Fantasma
@@ -125,7 +248,9 @@ content_class: flexbox vcenter
 
 ![supply chain routes](images/dataday/simplesc.gif) ![supply chain routes](images/dataday/complexsc.gif)
 
-<aside class="note"> <section>[Flowing Data post](http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/)</section></aside>
+<aside class="note"> <section>
+	<p>Para esta simulación/demostración se tomo en cuenta un "Moving Average" de 6 semanas</p>
+</section></aside>
 
 ---
 title: Inventario Fantasma
@@ -202,54 +327,12 @@ subtitle: Un caso inventado...
 </div>
 </div>
 
-Entonces por que son tan importantes los últimos 50 metros??? 
+<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
 
-<aside class="note"> <section>[Flowing Data post](http://flowingdata.com/2011/05/11/how-to-map-connections-with-great-circles/)</section></aside>
+<aside class="note"> <section>
+	<p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
+</section></aside>
 
----
-title: Inventario Fantasma
-subtitle: Un tipo de Out of Stock (OOS)
-class: segue dark nobackground
----
-title: Out-Of-Stocks (OOS)
-subtitle: La madre del inventario fantasma! 
-
-**OOS** ocurre cuando no hay "físicamente" un item en el estante para su venta.  
-**OOS** inicia cuando el último item de un SKU es removido del estante.  
-**OOS** termina con el resuministro del mismo SKU en el estante.  
-
-Podemos definir los siguientes tipos de OOS:
-
-- DC: **No Existe** inventario
-- Tienda: **No Existe** inventario en la tienda
-- Shelf: **Existe** inventario en la tienda pero no se encuentra en el estante
-
----
-title: Shelf - OOS
-subtitle: Por que no está mi producto en el estante?
-
-- No hay producto  
-- Operación de la Tienda:  
-	- Está en un lugar incorrecto  
-	- Todavía está en el bodega (backroom)  
-	- Está en "transito"  
-- Nivel de inventario Incorrecto en el sistema:  
-	- Inventario Escondido  
-	- ***Inventario Fantasma***  
-		- Robado, Dañado o Extraviado  
----
-title: Inventario Fantasma
-subtitle: El circulo vicioso...
-
-*  Tengo inventario pero **NO TENGO** inventario  
-*  No se ordena más producto por que "el sistema dice que hay"  
-*  No se registra ninguna venta (POS) en las semanas posteriores  
-*  Se ajusta el "forecast" acorde a las ventas registradas (o no registradas)  
-*  Se llega a la conclusión de que "Ese producto no se vende"  
-	+ Auditoría fisica para corregir inventarios  
-	+ Se puede tomar la decisión de descontinuar el producto:  
-
-Este ciclo se repite... y se repite... y se repite... y se repite...
 ---
 title: Inventario Fantasma
 subtitle: Desde el punto de vista del Retailer
@@ -372,9 +455,13 @@ subtitle: ¿Los problemas del productor a la <sup>n</sup> potencia?
 			</div>
 		</div>
 	</div>
+
+<aside class="note"> <section>
+	<p>Si bien el Retailer no se tiene que preocupar por lo que pasa en la cadena de suministro de sus proveedores, la combinacion de ITEM x CENTRO DE DISTRIBUCION x TIENDAS hace que sea igual o más complicado controlar lo que sucede </p>
+</section></aside>
 ---
 title: Inventario Fantasma
-subtitle: Y los algoritmos 'apá!
+subtitle: Analytics
 class: segue dark nobackground
 
 ---
@@ -385,28 +472,36 @@ title: #datavis
   src="images/dataday/inventario.html">
 </iframe>
 
+<aside class="note"> <section>
+	<p>Siendo más especificos el periodo de tiempo sin ventas puede ser generado por 1) Inventario Fantasma, 2) Producto en el almacen (no estante), 3) No hay producto disponible, 4) No se vendió el producto, 5) otros.</p>
+</section></aside>
+
 ---
 title: Inventario Fantasma
 subtitle: Un nuevo approach
 
-Por medio de algoritmos podemos identificar instancias de Inventario Fansamsa Potencial y tomar medidas especificas para solucionarlos
+Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados) para poder identificar instancias de Inventario Fantasma en el sistema.  
+
+- Definir "gap" maximo entre ventas
+- Clasificar items por categoría o tipo de producto
+- Validar estimaciones
 
 ---
 title: Retail Analytics
 subtitle: Otras aplicaciones
 
-Solo en el área de replenishment:
+Solo en el área de "replenishment":
 
 - Identificación de eventos por medio de precios promedios  
 - Optimización de niveles de inventarios  
 - Afinación de Forecast  
-- Identificar tendencias por tienda/region/categoria y customatizar soluciones  
-- Combinación con información socio-economica  
-- Combinación con información del clima  
+- Identificar tendencias por tienda/región/categoría y customatizar soluciones  
+- Combinación con información socio-económica  
+- Combinación con información meteorológica  
 - Entre otras...  
 
 ---
 title: Inventario Fantasma
-subtitle: QA
+subtitle: Q&A
 class: segue dark nobackground
 
