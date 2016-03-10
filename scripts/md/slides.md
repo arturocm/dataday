@@ -17,7 +17,7 @@ subtitle: "Street Cred"
 - M. Mfg, Supply Chain y Operaciones - McGill University
 - Más de 9 años de experiencia en Supply Chain y Analytics en:
 	- Retail y CPGs
-	- Distribución de Electronicos
+	- Distribución de Electrónicos
 	- Industria Aeroespacial
 	- Industria Automotriz
 	- Manufactura
