@@ -72,7 +72,7 @@ URL: https://code.google.com/p/io-2012-slides
     </hgroup>
     <article ><ul>
 <li>Ing. Mecánico Administrador - Tec de Monterrey</li>
-<li>M. Mfg, Supply Chain y Operaciones - McGill University</li>
+<li>M. Manufactura, Supply Chain y Operaciones - McGill University</li>
 <li>Más de 9 años de experiencia en Supply Chain y Analytics en:<ul>
 <li>Retail y CPGs</li>
 <li>Distribución de Electrónicos</li>
@@ -101,16 +101,22 @@ URL: https://code.google.com/p/io-2012-slides
   
     <hgroup>
       <h2>Out-Of-Stocks (OOS)</h2>
-      <h3>La madre del inventario fantasma!</h3>
+      <h3>Definición</h3>
     </hgroup>
-    <article ><p><strong>OOS</strong> ocurre cuando no hay "físicamente" un item en el estante para su venta.<br />
-<strong>OOS</strong> inicia cuando el último item de un SKU es removido del estante.<br />
-<strong>OOS</strong> termina con el resuministro del mismo SKU en el estante.  </p>
+    <article ><ul class="build">
+<li><strong>OOS</strong> ocurre cuando no hay "físicamente" un item en el estante para su venta.  </li>
+<li><strong>OOS</strong> inicia cuando el último item de un SKU es removido del estante.  </li>
+<li>
+<p><strong>OOS</strong> termina con el resuministro del mismo SKU en el estante.  </p>
+</li>
+<li>
 <p>Podemos definir los siguientes tipos de OOS:</p>
-<ul>
+<ul class="build">
 <li>DC: <strong>No Existe</strong> inventario</li>
 <li>Store: <strong>No Existe</strong> inventario en la tienda</li>
 <li>Shelf: <strong>Existe</strong> inventario en la tienda pero no se encuentra en el estante</li>
+</ul>
+</li>
 </ul></article>
  
 </slide>
@@ -138,16 +144,16 @@ URL: https://code.google.com/p/io-2012-slides
             </thead>
             <tbody>
                 <tr>
-                    <td>No compra item</td>
-                    <td class="text-right">9 %</td>
-                    <td class="text-center">X</td>
-                    <td class="text-center">X</td>
-                </tr>
-                <tr>
                     <td>Compra item en otra tienda</td>
                     <td class="text-right">31 %</td>
                     <td class="text-center">X</td>
                     <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td>No compra item</td>
+                    <td class="text-right">9 %</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
                 </tr>
                 <tr>
                     <td>Pospone compra</td>
@@ -156,16 +162,16 @@ URL: https://code.google.com/p/io-2012-slides
                     <td class="text-center">X</td>
                 </tr>
                 <tr>
-                    <td>Sustituye misma marca</td>
-                    <td class="text-right">19 %</td>
-                    <td class="text-center"></td>
-                    <td class="text-center"></td>
-                </tr>
-                <tr>
                     <td>Sustituye otra marca</td>
                     <td class="text-right">26 %</td>
                     <td class="text-center"></td>
                     <td class="text-center">X</td>
+                </tr>
+                <tr>
+                    <td>Sustituye misma marca</td>
+                    <td class="text-right">19 %</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
                 </tr>
             </tbody>
         </table>
@@ -181,17 +187,17 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Shelf - OOS</h2>
       <h3>¿Por que no está mi producto en el estante?</h3>
     </hgroup>
-    <article ><ul>
+    <article ><ul class="build">
 <li>No hay producto  </li>
-<li>Operación de la Tienda:  <ul>
+<li>Operación de la Tienda:  <ul class="build">
 <li>Está en un lugar incorrecto  </li>
 <li>Todavía está en el bodega (backroom)  </li>
 <li>Está en "transito"  </li>
 </ul>
 </li>
-<li>Nivel de inventario Incorrecto en el sistema:  <ul>
+<li>Nivel de inventario Incorrecto en el sistema:  <ul class="build">
 <li>Inventario Escondido  </li>
-<li><strong><em>Inventario Fantasma</em></strong>  <ul>
+<li><strong><em>Inventario Fantasma</em></strong>  <ul class="build">
 <li>Robado, Dañado o Extraviado  </li>
 </ul>
 </li>
@@ -241,6 +247,91 @@ URL: https://code.google.com/p/io-2012-slides
       <h3>Desde el punto de vista del productor</h3>
     </hgroup>
   
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Inventario Fantasma</h2>
+      <h3>Un caso inventado...</h3>
+    </hgroup>
+    <article ><div class="container-fluid"> 
+    <div class="col-md-6">
+    <h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
+    <h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
+    <img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
+    </div>
+    <div class="col-md-6">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>item</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Distancia (Km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Malta</td>
+        <td>Vancouver</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,578.8</td>
+      </tr>
+      <tr>
+        <td>Cebada</td>
+        <td>Milwaukee</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,472.8</td>
+      </tr>
+            <tr>
+        <td>Lúpulo</td>
+        <td>Alemania</td>
+        <td>Hermosillo</td>
+        <td class="text-right">9,474.2</td>
+      </tr>
+            <tr>
+        <td>Envases</td>
+        <td>Monterrey</td>
+        <td>Hermosillo</td>
+        <td class="text-right">1,118.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>Hermosillo</td>
+        <td>León</td>
+        <td class="text-right">1,288.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>León</td>
+        <td>Cd. México</td>
+        <td class="text-right">324.6</td>
+      </tr>
+                  <tr>
+        <td>Cerveza</td>
+        <td>Cd. México</td>
+        <td>WTC</td>
+        <td class="text-right">1.3</td>
+      </tr>
+            </tr>
+                  <tr>
+        <td><b>TOTAL</b></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"><b>17,258.4</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
+
+<aside class="note"> <section>
+    <p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
+</section></aside></article>
+ 
 </slide>
 
 <slide  >
@@ -351,91 +442,6 @@ URL: https://code.google.com/p/io-2012-slides
     <article class="flexbox vcenter"><p><img alt="supply chain routes" src="images/dataday/simplesc.gif" /> <img alt="supply chain routes" src="images/dataday/complexsc.gif" /></p>
 <aside class="note"> <section>
     <p>Para esta simulación/demostración se tomo en cuenta un "Moving Average" de 6 semanas</p>
-</section></aside></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Inventario Fantasma</h2>
-      <h3>Un caso inventado...</h3>
-    </hgroup>
-    <article ><div class="container-fluid"> 
-    <div class="col-md-6">
-    <h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
-    <h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
-    <img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
-    </div>
-    <div class="col-md-6">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>item</th>
-        <th>Origen</th>
-        <th>Destino</th>
-        <th>Distancia (Km)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Malta</td>
-        <td>Vancouver</td>
-        <td>Hermosillo</td>
-        <td class="text-right">2,578.8</td>
-      </tr>
-      <tr>
-        <td>Cebada</td>
-        <td>Milwaukee</td>
-        <td>Hermosillo</td>
-        <td class="text-right">2,472.8</td>
-      </tr>
-            <tr>
-        <td>Lúpulo</td>
-        <td>Alemania</td>
-        <td>Hermosillo</td>
-        <td class="text-right">9,474.2</td>
-      </tr>
-            <tr>
-        <td>Envases</td>
-        <td>Monterrey</td>
-        <td>Hermosillo</td>
-        <td class="text-right">1,118.2</td>
-      </tr>
-            <tr>
-        <td>Cerveza</td>
-        <td>Hermosillo</td>
-        <td>León</td>
-        <td class="text-right">1,288.2</td>
-      </tr>
-            <tr>
-        <td>Cerveza</td>
-        <td>León</td>
-        <td>Cd. México</td>
-        <td class="text-right">324.6</td>
-      </tr>
-                  <tr>
-        <td>Cerveza</td>
-        <td>Cd. México</td>
-        <td>WTC</td>
-        <td class="text-right">1.3</td>
-      </tr>
-            </tr>
-                  <tr>
-        <td><b>TOTAL</b></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"><b>17,258.4</b></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-
-<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
-
-<aside class="note"> <section>
-    <p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
 </section></aside></article>
  
 </slide>
@@ -607,13 +613,19 @@ URL: https://code.google.com/p/io-2012-slides
   
     <hgroup>
       <h2>Inventario Fantasma</h2>
-      <h3>Un nuevo approach</h3>
+      <h3>Un nuevo-viejo "approach"</h3>
     </hgroup>
-    <article ><p>Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados) para poder identificar instancias de Inventario Fantasma en el sistema.  </p>
-<ul>
-<li>Definir "gap" maximo entre ventas</li>
-<li>Clasificar items por categoría o tipo de producto</li>
-<li>Validar estimaciones</li>
+    <article ><p>Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados):</p>
+<ul class="build">
+<li>Clasificar items (i.e. categoría, tipo de producto, temporada)</li>
+<li>Definir "gap" máximo entre actividad de POS (meses, semanas, dias, horas)</li>
+<li>Calcular "Ventas Perdidas" que representa cada combinación item/tienda<ul class="build">
+<li>Seleccionar Top 5, 10, 20 combinaciones</li>
+</ul>
+</li>
+<li>Validar resultados item/tienda identificados</li>
+<li>Ajustar criterio a validación</li>
+<li>Repetir ciclo hasta obtener % predicción aceptable</li>
 </ul></article>
  
 </slide>
@@ -625,8 +637,8 @@ URL: https://code.google.com/p/io-2012-slides
       <h3>Otras aplicaciones</h3>
     </hgroup>
     <article ><p>Solo en el área de "replenishment":</p>
-<ul>
-<li>Identificación de eventos por medio de precios promedios  </li>
+<ul class="build">
+<li>Utilizar precios promedio para identificar eventos o liquidaciones</li>
 <li>Optimización de niveles de inventarios  </li>
 <li>Afinación de Forecast  </li>
 <li>Identificar tendencias por tienda/región/categoría y customatizar soluciones  </li>

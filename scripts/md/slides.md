@@ -14,7 +14,7 @@ title: Bio
 subtitle: "Street Cred"
 
 - Ing. Mecánico Administrador - Tec de Monterrey
-- M. Mfg, Supply Chain y Operaciones - McGill University
+- M. Manufactura, Supply Chain y Operaciones - McGill University
 - Más de 9 años de experiencia en Supply Chain y Analytics en:
 	- Retail y CPGs
 	- Distribución de Electrónicos
@@ -31,17 +31,18 @@ subtitle: Un tipo de Out of Stock (OOS)
 class: segue dark nobackground
 ---
 title: Out-Of-Stocks (OOS)
-subtitle: La madre del inventario fantasma! 
+subtitle: Definición
+build_lists: true
 
-**OOS** ocurre cuando no hay "físicamente" un item en el estante para su venta.  
-**OOS** inicia cuando el último item de un SKU es removido del estante.  
-**OOS** termina con el resuministro del mismo SKU en el estante.  
+- **OOS** ocurre cuando no hay "físicamente" un item en el estante para su venta.  
+- **OOS** inicia cuando el último item de un SKU es removido del estante.  
+- **OOS** termina con el resuministro del mismo SKU en el estante.  
 
-Podemos definir los siguientes tipos de OOS:
+- Podemos definir los siguientes tipos de OOS:
 
-- DC: **No Existe** inventario
-- Store: **No Existe** inventario en la tienda
-- Shelf: **Existe** inventario en la tienda pero no se encuentra en el estante
+	- DC: **No Existe** inventario
+	- Store: **No Existe** inventario en la tienda
+	- Shelf: **Existe** inventario en la tienda pero no se encuentra en el estante
 
 ---
 title: OOS
@@ -64,16 +65,16 @@ subtitle: Desde el punto de vista del consumidor
 			</thead>
 			<tbody>
 				<tr>
-					<td>No compra item</td>
-					<td class="text-right">9 %</td>
-					<td class="text-center">X</td>
-					<td class="text-center">X</td>
-				</tr>
-				<tr>
 					<td>Compra item en otra tienda</td>
 					<td class="text-right">31 %</td>
 					<td class="text-center">X</td>
 					<td class="text-center"></td>
+				</tr>
+				<tr>
+					<td>No compra item</td>
+					<td class="text-right">9 %</td>
+					<td class="text-center">X</td>
+					<td class="text-center">X</td>
 				</tr>
 				<tr>
 					<td>Pospone compra</td>
@@ -82,16 +83,16 @@ subtitle: Desde el punto de vista del consumidor
 					<td class="text-center">X</td>
 				</tr>
 				<tr>
-					<td>Sustituye misma marca</td>
-					<td class="text-right">19 %</td>
-					<td class="text-center"></td>
-					<td class="text-center"></td>
-				</tr>
-				<tr>
 					<td>Sustituye otra marca</td>
 					<td class="text-right">26 %</td>
 					<td class="text-center"></td>
 					<td class="text-center">X</td>
+				</tr>
+				<tr>
+					<td>Sustituye misma marca</td>
+					<td class="text-right">19 %</td>
+					<td class="text-center"></td>
+					<td class="text-center"></td>
 				</tr>
 			</tbody>
 		</table>
@@ -102,6 +103,7 @@ subtitle: Desde el punto de vista del consumidor
 ---
 title: Shelf - OOS
 subtitle: ¿Por que no está mi producto en el estante?
+build_lists: true
 
 - No hay producto  
 - Operación de la Tienda:  
@@ -144,6 +146,87 @@ subtitle: El círculo vicioso...
 title: Inventario Fantasma
 subtitle: Desde el punto de vista del productor
 class: segue dark nobackground
+
+---
+title: Inventario Fantasma
+subtitle: Un caso inventado...
+
+<div class="container-fluid"> 
+	<div class="col-md-6">
+	<h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
+	<h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
+	<img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
+	</div>
+	<div class="col-md-6">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>item</th>
+        <th>Origen</th>
+        <th>Destino</th>
+        <th>Distancia (Km)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Malta</td>
+        <td>Vancouver</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,578.8</td>
+      </tr>
+      <tr>
+        <td>Cebada</td>
+        <td>Milwaukee</td>
+        <td>Hermosillo</td>
+        <td class="text-right">2,472.8</td>
+      </tr>
+            <tr>
+        <td>Lúpulo</td>
+        <td>Alemania</td>
+        <td>Hermosillo</td>
+        <td class="text-right">9,474.2</td>
+      </tr>
+            <tr>
+        <td>Envases</td>
+        <td>Monterrey</td>
+        <td>Hermosillo</td>
+        <td class="text-right">1,118.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>Hermosillo</td>
+        <td>León</td>
+        <td class="text-right">1,288.2</td>
+      </tr>
+            <tr>
+        <td>Cerveza</td>
+        <td>León</td>
+        <td>Cd. México</td>
+        <td class="text-right">324.6</td>
+      </tr>
+                  <tr>
+        <td>Cerveza</td>
+        <td>Cd. México</td>
+        <td>WTC</td>
+        <td class="text-right">1.3</td>
+      </tr>
+            </tr>
+                  <tr>
+        <td><b>TOTAL</b></td>
+        <td></td>
+        <td></td>
+        <td class="text-right"><b>17,258.4</b></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
+<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
+
+<aside class="note"> <section>
+	<p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
+</section></aside>
 
 ---
 title: De la tierra a la tienda... 
@@ -250,87 +333,6 @@ content_class: flexbox vcenter
 
 <aside class="note"> <section>
 	<p>Para esta simulación/demostración se tomo en cuenta un "Moving Average" de 6 semanas</p>
-</section></aside>
-
----
-title: Inventario Fantasma
-subtitle: Un caso inventado...
-
-<div class="container-fluid"> 
-	<div class="col-md-6">
-	<h3 class="text-center">Cerveza Artesanal "CHHHeve"</h3>
-	<h4 class="text-center">Producida en Hermosillo, Sonora para el mundo</h4>
-	<img class="img-responsive" src="images/dataday/sc.png" alt="supply chain routes">
-	</div>
-	<div class="col-md-6">
-  <table class="table table-hover">
-    <thead>
-      <tr>
-        <th>item</th>
-        <th>Origen</th>
-        <th>Destino</th>
-        <th>Distancia (Km)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Malta</td>
-        <td>Vancouver</td>
-        <td>Hermosillo</td>
-        <td class="text-right">2,578.8</td>
-      </tr>
-      <tr>
-        <td>Cebada</td>
-        <td>Milwaukee</td>
-        <td>Hermosillo</td>
-        <td class="text-right">2,472.8</td>
-      </tr>
-            <tr>
-        <td>Lúpulo</td>
-        <td>Alemania</td>
-        <td>Hermosillo</td>
-        <td class="text-right">9,474.2</td>
-      </tr>
-            <tr>
-        <td>Envases</td>
-        <td>Monterrey</td>
-        <td>Hermosillo</td>
-        <td class="text-right">1,118.2</td>
-      </tr>
-            <tr>
-        <td>Cerveza</td>
-        <td>Hermosillo</td>
-        <td>León</td>
-        <td class="text-right">1,288.2</td>
-      </tr>
-            <tr>
-        <td>Cerveza</td>
-        <td>León</td>
-        <td>Cd. México</td>
-        <td class="text-right">324.6</td>
-      </tr>
-                  <tr>
-        <td>Cerveza</td>
-        <td>Cd. México</td>
-        <td>WTC</td>
-        <td class="text-right">1.3</td>
-      </tr>
-            </tr>
-                  <tr>
-        <td><b>TOTAL</b></td>
-        <td></td>
-        <td></td>
-        <td class="text-right"><b>17,258.4</b></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</div>
-
-<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
-
-<aside class="note"> <section>
-	<p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
 </section></aside>
 
 ---
@@ -478,21 +480,28 @@ title: #datavis
 
 ---
 title: Inventario Fantasma
-subtitle: Un nuevo approach
+subtitle: Un nuevo-viejo "approach"
+build_lists: true
 
-Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados) para poder identificar instancias de Inventario Fantasma en el sistema.  
+Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados):
 
-- Definir "gap" maximo entre ventas
-- Clasificar items por categoría o tipo de producto
-- Validar estimaciones
+- Clasificar items (i.e. categoría, tipo de producto, temporada)
+- Definir "gap" máximo entre actividad de POS (meses, semanas, dias, horas)
+- Calcular "Ventas Perdidas" que representa cada combinación item/tienda
+	- Seleccionar Top 5, 10, 20 combinaciones
+- Validar resultados item/tienda identificados
+- Ajustar criterio a validación
+- Repetir ciclo hasta obtener % predicción aceptable
+
 
 ---
 title: Retail Analytics
 subtitle: Otras aplicaciones
+build_lists: true
 
 Solo en el área de "replenishment":
 
-- Identificación de eventos por medio de precios promedios  
+- Utilizar precios promedio para identificar eventos o liquidaciones
 - Optimización de niveles de inventarios  
 - Afinación de Forecast  
 - Identificar tendencias por tienda/región/categoría y customatizar soluciones  
