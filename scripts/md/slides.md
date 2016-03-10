@@ -14,12 +14,12 @@ title: Bio
 subtitle: "Street Cred"
 
 - Ing. Mecánico Administrador - Tec de Monterrey
-- M. en Adm. de Mfg, Supply Chain y Operaciones - McGill
+- M. Mfg, Supply Chain y Operaciones - McGill University
 - Más de 9 años de experiencia en Supply Chain y Analytics en:
 	- Retail y CPGs
 	- Distribución de Electronicos
-	- Industria Aerospacial
-	- Industria Automototriz
+	- Industria Aeroespacial
+	- Industria Automotriz
 	- Manufactura
 - Sonorense (hasta a -30ºC)
 
@@ -490,18 +490,18 @@ Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos av
 title: Retail Analytics
 subtitle: Otras aplicaciones
 
-Solo en el área de replenishment:
+Solo en el área de "replenishment":
 
 - Identificación de eventos por medio de precios promedios  
 - Optimización de niveles de inventarios  
 - Afinación de Forecast  
-- Identificar tendencias por tienda/region/categoria y customatizar soluciones  
-- Combinación con información socio-economica  
-- Combinación con información del clima  
+- Identificar tendencias por tienda/región/categoría y customatizar soluciones  
+- Combinación con información socio-económica  
+- Combinación con información meteorológica  
 - Entre otras...  
 
 ---
 title: Inventario Fantasma
-subtitle: QA
+subtitle: Q&A
 class: segue dark nobackground
 
