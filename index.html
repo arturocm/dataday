@@ -53,10 +53,10 @@ URL: https://code.google.com/p/io-2012-slides
     <article ><ul>
 <li>Bio</li>
 <li>Inventario Fantasma:<ul>
-<li>Desde el punto de vista del Productor</li>
 <li>Un tipo de Out-Of-Stock (OOS)</li>
+<li>Desde el punto de vista del Productor</li>
 <li>Desde el punto de vista del Retailer</li>
-<li>Y los algoritmos 'apá!</li>
+<li>Analytics!</li>
 </ul>
 </li>
 <li>Q&amp;A</li>
@@ -70,8 +70,166 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Bio</h2>
       <h3>"Street Cred"</h3>
     </hgroup>
-    <article ><p>Experience Roadmap IMAGE</p>
-<aside class="note"> <section> Crear un timeline/roadmap sencillo para representar la experiencia </section></aside></article>
+    <article ><ul>
+<li>Ing. Mecánico Administrador - Tec de Monterrey</li>
+<li>M. en Adm. de Mfg, Supply Chain y Operaciones - McGill</li>
+<li>Más de 9 años de experiencia en Supply Chain y Analytics en:<ul>
+<li>Retail y CPGs</li>
+<li>Distribución de Electronicos</li>
+<li>Industria Aerospacial</li>
+<li>Industria Automototriz</li>
+<li>Manufactura</li>
+</ul>
+</li>
+<li>Sonorense (hasta a -30ºC)</li>
+</ul>
+<aside class="note"> <section> <img class="img-responsive" src="images/dataday/carniasada.jpg" alt="OOS Root Cause"></section></aside></article>
+ 
+</slide>
+
+<slide class="segue dark nobackground" >
+  
+    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>Inventario Fantasma</h2>
+      <h3>Un tipo de Out of Stock (OOS)</h3>
+    </hgroup>
+  
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Out-Of-Stocks (OOS)</h2>
+      <h3>La madre del inventario fantasma!</h3>
+    </hgroup>
+    <article ><p><strong>OOS</strong> ocurre cuando no hay "físicamente" un item en el estante para su venta.<br />
+<strong>OOS</strong> inicia cuando el último item de un SKU es removido del estante.<br />
+<strong>OOS</strong> termina con el resuministro del mismo SKU en el estante.  </p>
+<p>Podemos definir los siguientes tipos de OOS:</p>
+<ul>
+<li>DC: <strong>No Existe</strong> inventario</li>
+<li>Store: <strong>No Existe</strong> inventario en la tienda</li>
+<li>Shelf: <strong>Existe</strong> inventario en la tienda pero no se encuentra en el estante</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>OOS</h2>
+      <h3>Desde el punto de vista del consumidor</h3>
+    </hgroup>
+    <article ><div class="container-fluid"> 
+    <div class="col-md-5">
+        <img class="img-responsive" src="images/dataday/root_cause_oos.png" alt="OOS Root Cause">
+    </div>
+    <div class="col-md-7">
+        <h3>Reacción del consumidor ante OOS</h3>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Acción</th>
+                    <th>Porcentage</th>
+                    <th>Tienda</th>
+                    <th>Proveedor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>No compra item</td>
+                    <td class="text-right">9 %</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                </tr>
+                <tr>
+                    <td>Compra item en otra tienda</td>
+                    <td class="text-right">31 %</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td>Pospone compra</td>
+                    <td class="text-right">15 %</td>
+                    <td class="text-center">X</td>
+                    <td class="text-center">X</td>
+                </tr>
+                <tr>
+                    <td>Sustituye misma marca</td>
+                    <td class="text-right">19 %</td>
+                    <td class="text-center"></td>
+                    <td class="text-center"></td>
+                </tr>
+                <tr>
+                    <td>Sustituye otra marca</td>
+                    <td class="text-right">26 %</td>
+                    <td class="text-center"></td>
+                    <td class="text-center">X</td>
+                </tr>
+            </tbody>
+        </table>
+        <h6>Credito: Gruen, Corsten, and Bharadwaj 2002</h6>
+    </div>
+</div></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Shelf - OOS</h2>
+      <h3>¿Por que no está mi producto en el estante?</h3>
+    </hgroup>
+    <article ><ul>
+<li>No hay producto  </li>
+<li>Operación de la Tienda:  <ul>
+<li>Está en un lugar incorrecto  </li>
+<li>Todavía está en el bodega (backroom)  </li>
+<li>Está en "transito"  </li>
+</ul>
+</li>
+<li>Nivel de inventario Incorrecto en el sistema:  <ul>
+<li>Inventario Escondido  </li>
+<li><strong><em>Inventario Fantasma</em></strong>  <ul>
+<li>Robado, Dañado o Extraviado  </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Inventario Fantasma</h2>
+      <h3>El círculo vicioso...</h3>
+    </hgroup>
+    <article ><div class="container-fluid"> 
+    <div class="col-md-8 col-md-offset-2">
+        <img class="img-responsive" src="images/dataday/vensim.png" alt="SD">
+    </div>
+</div>
+
+<aside class="note"> <section>
+                    <div class="text-left">
+                    <h5><ul>
+                        <li>Tengo inventario pero **NO TENGO** inventario</li>
+                        <li>No se ordena más producto por que "el sistema dice que hay"  </li>
+                        <li>No se registra ninguna venta (POS) en las semanas posteriores </li>
+                        <li>Se ajusta el "forecast" acorde a las ventas registradas (o no registradas) </li>
+                        <li>Se llega a la conclusión de que "Ese producto no se vende"  </li>
+                        <ul>
+                        <li>Auditoría fisica para corregir inventarios </li>
+                        <li>Se puede tomar la decisión de descontinuar el producto</li>
+                        </ul>
+                    </ul>
+                    Este ciclo se repite... y se repite... y se repite... y se repite...
+                    </h5>
+                </div>
+</section></aside></article>
  
 </slide>
 
@@ -274,85 +432,11 @@ URL: https://code.google.com/p/io-2012-slides
 </div>
 </div>
 
-<p>Entonces por que son tan importantes los últimos 50 metros??? </p>
+<h5>Más de 17,258,000 mts supervisando el suministro, producción y distribución de "CHHHeve" para que al final fallen los últimos 50 mts!!!</h5>
+
 <aside class="note"> <section>
     <p>En este ejemplo se puede ver que no importa tener una Cadena de Suministro perfectamente controlada, si al final el producto no se encuentra en el estante, no puede ser adquirido por el consumidor.</p>
 </section></aside></article>
- 
-</slide>
-
-<slide class="segue dark nobackground" >
-  
-    <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Inventario Fantasma</h2>
-      <h3>Un tipo de Out of Stock (OOS)</h3>
-    </hgroup>
-  
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Out-Of-Stocks (OOS)</h2>
-      <h3>La madre del inventario fantasma!</h3>
-    </hgroup>
-    <article ><p><strong>OOS</strong> ocurre cuando no hay "físicamente" un item en el estante para su venta.<br />
-<strong>OOS</strong> inicia cuando el último item de un SKU es removido del estante.<br />
-<strong>OOS</strong> termina con el resuministro del mismo SKU en el estante.  </p>
-<p>Podemos definir los siguientes tipos de OOS:</p>
-<ul>
-<li>DC: <strong>No Existe</strong> inventario</li>
-<li>Tienda: <strong>No Existe</strong> inventario en la tienda</li>
-<li>Shelf: <strong>Existe</strong> inventario en la tienda pero no se encuentra en el estante</li>
-</ul></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Shelf - OOS</h2>
-      <h3>Por que no está mi producto en el estante?</h3>
-    </hgroup>
-    <article ><ul>
-<li>No hay producto  </li>
-<li>Operación de la Tienda:  <ul>
-<li>Está en un lugar incorrecto  </li>
-<li>Todavía está en el bodega (backroom)  </li>
-<li>Está en "transito"  </li>
-</ul>
-</li>
-<li>Nivel de inventario Incorrecto en el sistema:  <ul>
-<li>Inventario Escondido  </li>
-<li><strong><em>Inventario Fantasma</em></strong>  <ul>
-<li>Robado, Dañado o Extraviado  </li>
-</ul>
-</li>
-</ul>
-</li>
-</ul></article>
- 
-</slide>
-
-<slide  >
-  
-    <hgroup>
-      <h2>Inventario Fantasma</h2>
-      <h3>El circulo vicioso...</h3>
-    </hgroup>
-    <article ><ul>
-<li>Tengo inventario pero <strong>NO TENGO</strong> inventario  </li>
-<li>No se ordena más producto por que "el sistema dice que hay"  </li>
-<li>No se registra ninguna venta (POS) en las semanas posteriores  </li>
-<li>Se ajusta el "forecast" acorde a las ventas registradas (o no registradas)  </li>
-<li>Se llega a la conclusión de que "Ese producto no se vende"  <ul>
-<li>Auditoría fisica para corregir inventarios  </li>
-<li>Se puede tomar la decisión de descontinuar el producto:  </li>
-</ul>
-</li>
-</ul>
-<p>Este ciclo se repite... y se repite... y se repite... y se repite...</p></article>
  
 </slide>
 
@@ -497,7 +581,7 @@ URL: https://code.google.com/p/io-2012-slides
     <aside class="gdbar"><img src="images/dataday/DataDay-clean.png"></aside>
     <hgroup class="auto-fadein">
       <h2>Inventario Fantasma</h2>
-      <h3>Y los algoritmos 'apá!</h3>
+      <h3>Analytics</h3>
     </hgroup>
   
 </slide>
@@ -525,7 +609,12 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Inventario Fantasma</h2>
       <h3>Un nuevo approach</h3>
     </hgroup>
-    <article ><p>Por medio de algoritmos podemos identificar instancias de Inventario Fansamsa Potencial y tomar medidas especificas para solucionarlos</p></article>
+    <article ><p>Cuando el uso de "visuales" no es práctico, se puede hacer uso de analyticos avanzados (y no tan avanzados) para poder identificar instancias de Inventario Fantasma en el sistema.  </p>
+<ul>
+<li>Definir "gap" maximo entre ventas</li>
+<li>Clasificar items por categoría o tipo de producto</li>
+<li>Validar estimaciones</li>
+</ul></article>
  
 </slide>
 
