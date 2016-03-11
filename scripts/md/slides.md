@@ -28,7 +28,7 @@ subtitle: "Street Cred"
 ---
 title: Inventario Fantasma
 subtitle: Un tipo de Out of Stock (OOS)
-class: segue dark nobackground
+class: segue dataday nobackground
 ---
 title: Out-Of-Stocks (OOS)
 subtitle: Definición
@@ -145,7 +145,7 @@ subtitle: El círculo vicioso...
 ---
 title: Inventario Fantasma
 subtitle: Desde el punto de vista del productor
-class: segue dark nobackground
+class: segue dataday nobackground
 
 ---
 title: Inventario Fantasma
@@ -464,7 +464,7 @@ subtitle: ¿Los problemas del productor a la <sup>n</sup> potencia?
 ---
 title: Inventario Fantasma
 subtitle: Analytics
-class: segue dark nobackground
+class: segue dataday nobackground
 
 ---
 title: #datavis
@@ -512,5 +512,5 @@ Solo en el área de "replenishment":
 ---
 title: Inventario Fantasma
 subtitle: Q&A
-class: segue dark nobackground
+class: segue dataday nobackground
 

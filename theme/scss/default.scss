@@ -128,6 +128,11 @@ slides > slide {
     background: $gray-4 !important;
   }
 
+  &.dataday {
+    background: $brand-bluedataday !important;
+  }
+
+
   &:not(.nobackground) {
     //background: white url(../../images/dataday/DataDay-clean.png) ($brand-small-icon-size * 2) 98% no-repeat;
     //@include background-size($brand-small-icon-size $brand-small-icon-size);
@@ -801,8 +806,8 @@ article.smaller {
 /* ===== SLIDE CONTENT ===== */
 .logoslide {
   img {
-    width: 383px;
-    height: 92px;
+    //width: 383px;
+    //height: 92px;
   }
 }
 
