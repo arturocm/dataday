@@ -341,7 +341,7 @@ subtitle: Desde el punto de vista del Retailer
 class: segue dark nobackground
 
 ---
-title: De la tienda a las casas...
+title: De la tienda a la casa...
 subtitle: ¿Los problemas del productor a la <sup>n</sup> potencia?
 
 <div class="container-fluid">
