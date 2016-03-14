@@ -44,6 +44,8 @@ build_lists: true
 	- Store: **No Existe** inventario en la tienda
 	- Shelf: **Existe** inventario en la tienda pero no se encuentra en el estante
 
+<aside class="note"> <section> <img class="img-responsive" src="images/dataday/OOS.png" alt="ejemplos"></section></aside>
+
 ---
 title: OOS
 subtitle: Desde el punto de vista del consumidor
